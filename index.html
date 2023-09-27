@@ -4,7 +4,32 @@
     <meta charset="UTF-8"/>
     <title>Сайт тестовый</title>
     <link rel="stylesheet" href="/Task3/css/style.css">
+    <style>#main-aside-wrapper {
+      flex-direction: row;
+      display: flex;
+    }
+    #main-aside-wrapper main, #main-aside-wrapper aside {
+      background-color: #ddd;
+      margin: 10px;
+      padding: 10px;
+    }
+    #main-aside-wrapper aside {
+      flex: 1;
+      order: 1;
+    }
+    #main-aside-wrapper main {
+      flex: 3;
+      order: 2;
+    }
+    @media screen and (min-width: 800px) {
+    #main-aside-wrapper {
+    flex-direction: row;
+      }
+    } 
+    
+    </style>
   </head>
+
   <body>
     <nav class="page-nav">
         <ul>
