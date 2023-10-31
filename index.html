@@ -1,36 +1,43 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8"/>
-    <title>Сайт тестовый</title>
-    <link rel="stylesheet" href="/Task3/css/style.css">
-    <style>#main-aside-wrapper {
-      flex-direction: row;
-      display: flex;
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Task3/css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
-    #main-aside-wrapper main, #main-aside-wrapper aside {
-      background-color: #ddd;
-      margin: 10px;
-      padding: 10px;
-    }
-    #main-aside-wrapper aside {
-      flex: 1;
-      order: 1;
-    }
-    #main-aside-wrapper main {
-      flex: 3;
-      order: 2;
-    }
-    @media screen and (min-width: 800px) {
-    #main-aside-wrapper {
-    flex-direction: row;
-      }
-    } 
-    
-    </style>
-  </head>
 
-  <body>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: lightblue;
+    }
+
+    .text {
+      font-size: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+      }
+
+      .text {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
     <nav class="page-nav">
         <ul>
             <li><a href="#link list">Список ссылок</a></li>
@@ -39,7 +46,7 @@
         </ul>
     </nav>
     <header class="header">
-        <div style="width:960px; padding: 10px; height:120px; margin: 0 auto;">
+        <div style="width:960px; padding: 10px; height:120px; margin-left: 0%;">
            <img style="float:left; margin:10px; width:100px; height:100px;" src="image.png" alt="">
         
             <div style=" padding:50px;">Сайт Тестовый</div>
@@ -59,9 +66,9 @@
         <br />
         <li><a href="#top"><b>Ссылка на фрагмент текущей страницы</b></a></li>
         <br />
-        <li><a href=https://www.youtube.com/@thesuperframe/?parameter1=p1&parameter2=p2&parametr3=p3/> <b>Ссылка с тремя параметрами</b></a></li>
+        <li><a href=https://www.youtube.com/@thesuperframe/?parameter1=p1&parameter2=p2&parametr3=p3> <b>Ссылка с тремя параметрами</b></a></li>
         <br />
-        <li>Ссылка с параметром id в URL</li>
+        <li><a href=https://www.youtube.com/@thesuperframe/?parameter=id> <b>Ссылка с параметром id в URL</b></li>
         <br />
         <li><a href="page"><b>Относительная на страницу в текущем каталоге</b></a></li>
         <br />
@@ -140,8 +147,8 @@
           </tr>
         </tbody>
     </table>
-       <b>Форма</b>
        <form action="https://www.example.com" method="POST" id="form">
+        <b>Форма</b><br>
         <label>
           Фамилия:<br>
           <input name="field-name-1" placeholder="Гаврилов" type="surname">
@@ -166,8 +173,8 @@
             <label>
             Дата рождения:<br>
             <input name="field-date" value="2004-12-02" type="date">
-         
-              <label><br><b>Любимый язык программирования:</b><br>
+         </label>
+         <br><b>Любимый язык программирования:</b><br>
          <p><select multiple>
           <option disabled>Выберите любимый язык программирования</option>
           <option value="C++">C++</option>
@@ -175,7 +182,6 @@
           <option value="Python">Python</option>
           <option value="Pascal">Pascal</option>
          </select></p>
-
          <br>
               Пол:<br>
               <label>
